@@ -1,0 +1,5 @@
+
+*.xml
+project/target/streams/compile/compileIncremental/$global/streams/out
+project/target/streams/$global/update/$global/streams/update_cache_2.12/output
+project/target/streams/$global/update/$global/streams/out
