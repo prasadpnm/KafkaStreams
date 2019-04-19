@@ -23,6 +23,7 @@ class CustomUDAF extends UserDefinedAggregateFunction {
   override def dataType: org.apache.spark.sql.types.StructType =
     StructType(StructField("result", DoubleType) ::
       StructField("value2", DoubleType) ::
+      StructField("value3", DoubleType) ::
       Nil)
   override def deterministic: Boolean = true
 
@@ -49,6 +50,6 @@ class CustomUDAF extends UserDefinedAggregateFunction {
 
   // This is where you output the final value, given the final value of your bufferSchema.
   override def evaluate(buffer: Row)= {
-    (math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0)),buffer.getDouble(2))
+    (math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0)),buffer.getDouble(2),0.0)
   }
 }
