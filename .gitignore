@@ -5,3 +5,5 @@ project/target/streams/$global/update/$global/streams/update_cache_2.12/output
 project/target/streams/$global/update/$global/streams/out
 target/.history
 target/.DS_Store
+src/main/scala/com/prasad/kafka/producer/Kafkaproducer/.DS_Store
+src/main/scala/com/prasad/kafka/producer/.DS_Store

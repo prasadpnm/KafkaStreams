@@ -1,10 +1,8 @@
-package com.prasad.kafka.producer.Kafkaproducer
-
-package main
+package com.prasad.com.prasad.spark.windowuadf
 
 import java.util.Properties
-import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, Producer, ProducerRecord}
-import org.apache.kafka.clients.producer
+
+import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
 
 object KafkaTransactionProducer{
   /*
