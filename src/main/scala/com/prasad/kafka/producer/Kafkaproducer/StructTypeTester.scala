@@ -6,9 +6,9 @@ import org.apache.spark.sql.catalyst.ScalaReflection
 
 
 object StructTypeTester {
-  case class Dummy(a: String, b: String)
+  case class Complex(a: Double, b: Double)
   case class Gummy(p: Integer, q: Integer)
-  case class Data(id: Integer, dummy: Dummy, amt: Double, gummy: Gummy)
+  case class Data(id: Integer, dummy: Complex, amt: Double, gummy: Gummy)
 
   def main(args: Array[String]): Unit = {
 
@@ -26,7 +26,7 @@ object StructTypeTester {
 
 
 
-    val schema = ScalaReflection.schemaFor[Data].dataType.asInstanceOf[StructType]
+    val schema = ScalaReflection.schemaFor[Complex].dataType.asInstanceOf[StructType]
     print(schema)
   }
 
