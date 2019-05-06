@@ -21,8 +21,8 @@ class  KafkaSink extends ForeachWriter[( String)] {
 
   def open(partitionId: Long,version: Long): Boolean = {
     print("open Connection")
-    print(" PartitionId " +partitionId)
-    print(" Version " +version)
+    print(" PartitionId"+partitionId)
+    print(" Version"+version)
     producer = new KafkaProducer(props)
     true
   }
